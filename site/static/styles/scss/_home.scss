@@ -13,7 +13,7 @@ html {
     min-height: 500px;
     height: 70%;
     background-color: $gray-transparent;
-    background-image: $baseurl+"/static/img/wisplight.jpg";
+    background-image: url($baseurl+"/static/img/wisplight.jpg");
     background-size: cover;
     position:relative;
     color:white;
@@ -167,7 +167,7 @@ html {
 }
 
 @mixin sprite-img($a, $b) {
-    background: $baseurl+"/static/img/value-prop-sprite.svg" $a $b;
+    background: url($baseurl+"/static/img/value-prop-sprite.svg") $a $b;
 }
 
 #sprite_shared_code { @include sprite-img(0px, 0) }

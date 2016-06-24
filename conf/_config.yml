@@ -35,7 +35,7 @@ language: en
 # Note: I did not find a way to have more than one SASS dir in search path
 sass:
     sass_dir: static/styles/scss
-    style   : compressed
+    # style   : compressed
 
 logo:
     navbar  :  /static/img/iot_bzh_full.svg

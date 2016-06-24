@@ -15,7 +15,7 @@
         @extend .sprite_img;
         height:1em;
         width:1em;
-        background-image: $baseurl+"/static/img/bug_icon.svg";
+        background-image: url($baseurl+"/static/img/bug_icon.svg");
         background-size: 2em 1em;
         display: inline-block;
     }
@@ -64,7 +64,7 @@
                 -moz-transition: background 0.25s linear;
                 transition: background 0.25s linear;
                 width: 36px;
-                background: $baseurl+"/static/img/sprite.png" no-repeat;
+                background: url($baseurl+"/static/img/sprite.png") no-repeat;
                 background-position: 3px -127px;
                 background-color: #4cc2e4;
                 height: 36px;

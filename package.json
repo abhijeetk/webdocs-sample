@@ -1,5 +1,5 @@
 {
-  "name": "webdoc-aglsite",
+  "name": "webdoc-sample",
   "version": "0.0.1",
   "description": "AGL technical documentation website",
   "main": "echo \"not specified\" && exit 1",

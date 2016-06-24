@@ -36,7 +36,7 @@
     }
 
     mark.logo {
-        background-image:$baseurl+'/static/img/platform-logos-all-sprite.svg';
+        background-image:url($baseurl+'/static/img/platform-logos-all-sprite.svg');
         width:35px;
         background-size: 385px 35px;
     }
