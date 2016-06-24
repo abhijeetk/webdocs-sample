@@ -18,27 +18,33 @@ Follow webdoc-tools at https://github.com/iotbzh/webdoc-tools/blob/master/README
 
 *** configure webdoc-sample
 
-Edit webdoc-sample/conf/AppDefault and change GEM_FILE + Doc_TOOLS to point on the right path.
-Default configuration concider that webdoc-tools + webdoc-sample site within the same parent directory and then GEM_FILE is located into webdoc-tools.
+Edit webdoc-sample/conf/AppDefault
++ Default configuration consider that webdoc-tools & webdoc-sample site within the same parent directory.
++ If needed change GEM_FILE + Doc_TOOLS to point on the right path.
 
 *** generate a 1st site from your template
+```
+ ./build.js --clean  # deleted all generated file if any
+ ./build.js --fetch  --verbose # collect doc from github
+ ./build.js --config --verbose # generate tocs and other configfile
+ ./build.js --html --serve --watch  # start a local webserver and wait for site source modification
 
-* ./build.js --clean
-* ./build.js --fetch
-* ./build.js --config
-* ./build.js --html --serve --watch
-* point a browser on http://localhost:4000
+  browser on http://localhost:4000
 
+ ./build --push --verbose # push generated to production webserver (check conf/AppDefault 1st)
+```
 
 *** start writing documentation
 
-* the directory ./site holds your website contend
-* directory not prefixed with "_" represent en entry within the menu
-* directory prefixed with "_" contains template, configuration, options, ... used to format your site
-* _data is a special directory that hold both static and generated files to ajust page & site values when generating html pages
-* each entry menu with a subindex should have its TOC defined in _tocs/dirname/toc_VERSION_LANGUAGE.yml
+- the directory ./site holds your website contend
+- site/* directories not prefixed with "_" represent en entry within the menu
+- site/_* directory contains template, configuration, options
+- site/_data is a special directory that hold both static and generated files to adjust page/site values within html pages
+- site/_tocs/*/toc_VERSION_LANGUAGE.yml TOC(TableOfContend) and GitFetch definition (ex: appfw)
+- site/_layouts holds page template 
+
 
 *** bugs
 
-* --fetch is asynchronous combining --fetch with other options will fail ./build.js --all --serve --watch
-* --watch to automatically regenerate pages on markdown file, you should force "./build --configs" when changing TOC or versions.
+- --fetch is asynchronous combining --fetch with other options will fail ./build.js --all --serve --watch
+- --watch to automatically regenerate pages on markdown file, you should force "./build --configs" when changing TOC or versions.
