@@ -1,0 +1,17 @@
+{
+  "name": "webdoc-aglsite",
+  "version": "0.0.1",
+  "description": "AGL technical documentation website",
+  "main": "echo \"not specified\" && exit 1",
+  "author": "Fulup IOT.BZH",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iotbzh/docsite.git"
+  },
+  "homepage": "https://docs.iot.bzh"
+}

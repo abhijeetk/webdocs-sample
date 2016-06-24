@@ -1,0 +1,81 @@
+# REFERENCE ENTRY:
+# -
+#     src:                                                  # required
+#         repoName:    "apache/cordova-cli"                 # required
+#         packageName: "cordova"                            # if empty: second part of repoName
+#         commit:      "master"                             # if empty: latest in NPM
+#         path:        "relative/path/to/file/in/repo.md"   # if empty: "README.md"
+#     dest:                                                 # required
+#         path:  "relative/path/in/docs/version.md"         # required
+-
+    src:
+        repoName: "iotbzh/afm-main"
+        packageName: "afm_main overview"
+        commit: "1.0"
+        path: "doc/overview.md"
+    dest:
+        path: "afm_main/doc/overview.md"
+-
+    src:
+        repoName: "iotbzh/afm-main"
+        packageName: "afm_main system-daemon"
+        commit: "1.0"
+        path: "doc/afm-system-daemon.md"
+    dest:
+        path: "afm_main/doc/afm-system-daemon.md"
+-
+    src:
+        repoName: "iotbzh/afm-main"
+        packageName: "afm_main user-daemon"
+        commit: "1.0"
+        path: "doc/afm-user-daemon.md"
+    dest:
+        path: "afm_main/doc/afm-user-daemon.md"
+-
+    src:
+        repoName: "iotbzh/afb-daemon"
+        packageName: "afb_daemon overview"
+        commit: "1.0"
+        path: "doc/afb-overview.md"
+    dest:
+        path: "afb_daemon/doc/afb-overview.md"
+-
+    src:
+        repoName: "iotbzh/afb-daemon"
+        packageName: "afb_daemon writing app"
+        commit: "1.0"
+        path: "doc/afb-application-writing.md"
+    dest:
+        path: "afb_daemon/doc/afb-application-writing.md"
+-
+    src:
+        repoName: "iotbzh/afb-daemon"
+        packageName: "afb_daemon overview"
+        commit: "1.0"
+        path: "doc/afb-plugins-overview.md"
+    dest:
+        path: "afb_daemon/doc/afb-plugins-overview.md"
+-
+    src:
+        repoName: "iotbzh/afb-daemon"
+        packageName: "afb_daemon writing bindings"
+        commit: "1.0"
+        path: "doc/afb-plugin-writing.md"
+    dest:
+        path: "afb_daemon/doc/afb-plugin-writing.md"
+-
+    src:
+        repoName: "iotbzh/afb-daemon"
+        packageName: "afb_daemon basic test"
+        commit: "1.0"
+        path: "doc/afb-tests-overview.md"
+    dest:
+        path: "afb_daemon/doc/afb-tests-overview.md"
+-
+    src:
+        repoName: "iotbzh/afb-daemon"
+        packageName: "afb_daemon vocabulary"
+        commit: "1.0"
+        path: "doc/afb-daemon-vocabulary.md"
+    dest:
+        path: "afb_daemon/doc/afb-daemon-vocabulary.md"
