@@ -1,0 +1,1 @@
+In order to reduce dependencies and avoid 'npm install' all dependencies are directly embedded with the project.

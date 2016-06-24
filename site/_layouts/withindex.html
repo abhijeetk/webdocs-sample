@@ -71,7 +71,7 @@ NOTE:
                     {% endcomment %}
                     {% else %}
 
-                        {% capture base_edit_link %}https://github.com/iotbzh/agl-docs/tree/master/www/{{ page.path }}{% endcapture %}
+                        {% capture base_edit_link %}{{ site.urls.edit_git }}{{ page.path }}{% endcapture %}
                         {% capture base_version %}/{{ page.version }}/{% endcapture %}
                         {% capture base_language %}/{{ page.language }}/{% endcapture %}
                         {% capture dev_version %}/dev/{% endcapture %}

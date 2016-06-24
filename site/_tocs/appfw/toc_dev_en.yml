@@ -1,18 +1,20 @@
+# WARNING: TOC should reference .HTML and .md (Index OK but Error 404)
+
 -
     name: Introduction
     children:
-        - url: reference/afm_main/doc/overview.md
-        - url: reference/afb_daemon/doc/afb-overview.md
-        - url: reference/afb_daemon/doc/afb-plugins-overview.md
+        - url: reference/afm_main/doc/overview.html
+        - url: reference/afb_daemon/doc/afb-overview.html
+        - url: reference/afb_daemon/doc/afb-plugins-overview.html
 -
     name: Guide
     children:
-        - url: reference/afm_main/doc/afm-system-daemon.md
-        - url: reference/afm_main/doc/afm-user-daemon.md
-        - url: reference/afm_main/doc/afm-user-daemon.md
-        - url: reference/afb_daemon/doc/afb-plugin-writing.md
-        - url: reference/afb_daemon/doc/afb-daemon-vocabulary.md
-        - url: reference/afb_daemon/doc/afb-tests-overview.md
+        - url: reference/afm_main/doc/afm-system-daemon.html
+        - url: reference/afm_main/doc/afm-user-daemon.html
+        - url: reference/afm_main/doc/afm-user-daemon.html
+        - url: reference/afb_daemon/doc/afb-plugin-writing.html
+        - url: reference/afb_daemon/doc/afb-daemon-vocabulary.html
+        - url: reference/afb_daemon/doc/afb-tests-overview.html
         
 
  

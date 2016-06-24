@@ -15,9 +15,9 @@
  */
 
     
-var argv= require("minimist")(process.argv.slice(2));
 var path= require("path");
 var fs  = require("fs");
+var argv= require("./_Minimist")(process.argv.slice(2));
 var config; // will be set at 1st getConfig call
 
 var GetConfig= function (extention) {

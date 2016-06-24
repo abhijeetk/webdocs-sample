@@ -6,7 +6,7 @@
 #         commit:      "master"                             # if empty: latest in NPM
 #         path:        "relative/path/to/file/in/repo.md"   # if empty: "README.md"
 #     dest:                                                 # required
-#         path:  "relative/path/in/docs/version.md"         # required
+#         path:  "relative/path/in/docs/version.md"       # required (WARNING: should be .md)
 -
     src:
         repoName: "iotbzh/afm-main"

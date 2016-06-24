@@ -4,31 +4,31 @@
     children:
         - 
             name: afm_main overview
-            url: reference/afm_main/doc/overview.md
+            url: reference/afm_main/doc/overview.html
         - 
             name: afb_daemon overview
-            url: reference/afb_daemon/doc/afb-overview.md
+            url: reference/afb_daemon/doc/afb-overview.html
         - 
             name: afb_daemon overview
-            url: reference/afb_daemon/doc/afb-plugins-overview.md
+            url: reference/afb_daemon/doc/afb-plugins-overview.html
 - 
     name: Guide
     children:
         - 
             name: afm_main system-daemon
-            url: reference/afm_main/doc/afm-system-daemon.md
+            url: reference/afm_main/doc/afm-system-daemon.html
         - 
             name: afm_main user-daemon
-            url: reference/afm_main/doc/afm-user-daemon.md
+            url: reference/afm_main/doc/afm-user-daemon.html
         - 
             name: afm_main user-daemon
-            url: reference/afm_main/doc/afm-user-daemon.md
+            url: reference/afm_main/doc/afm-user-daemon.html
         - 
             name: afb_daemon writing bindings
-            url: reference/afb_daemon/doc/afb-plugin-writing.md
+            url: reference/afb_daemon/doc/afb-plugin-writing.html
         - 
             name: afb_daemon vocabulary
-            url: reference/afb_daemon/doc/afb-daemon-vocabulary.md
+            url: reference/afb_daemon/doc/afb-daemon-vocabulary.html
         - 
             name: afb_daemon basic test
-            url: reference/afb_daemon/doc/afb-tests-overview.md
+            url: reference/afb_daemon/doc/afb-tests-overview.html

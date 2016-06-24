@@ -37,6 +37,9 @@ sass:
     sass_dir: static/styles/scss
     # style   : compressed
 
+urls:
+    edit_git : https://github.com/iotbzh/webdocs-sample/blob/master/site/
+
 logo:
     navbar  :  /static/img/iot_bzh_full.svg
     textonly:  /static/img/iot_bzh_full.svg
