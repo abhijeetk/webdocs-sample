@@ -5,8 +5,8 @@
 # =======
 # Site settings
 # =======
-title:          Apache Cordova
-title_suffix:   "Apache Cordova"
+title:          "WebDocs Sample"
+title_suffix:   "by IoT.bzh"
 url:            "https://cordova.apache.org" # the base hostname & protocol
 baseurl:        "" # the subpath of the site, e.g. /blog; NOTE: no trailing slash
 rss_path:       /feed.xml

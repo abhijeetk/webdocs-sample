@@ -1,26 +1,28 @@
 Introduction
 ============
 
-This repository contains a sample of documentation website, rendering is visible at http://docs.iot.bzh/sample
-This sample website relies on on http://github.com/iotbzh/webdoc-tools
+This repository contains a sample of documentation website, rendering is visible at http://docs.iot.bzh
+This sample website relies on on http://github.com/iotbzh/webdocs-tools
 
 Installing
 ==========
 
 ## dependencies webdoc-tools
 
-Follow webdoc-tools at https://github.com/iotbzh/webdoc-tools/blob/master/README.md
+Install webdocs-tools from https://github.com/iotbzh/webdocs-tools/blob/master/README.md
 
 ## install webdoc-sample
 
-* git clone http://github.com/iotbzh/webdoc-sample
-* cd xxx/webdoc-sample; npm install
+```
+ git clone http://github.com/iotbzh/webdocs-sample
+ cd webdocs-sample
+```
 
 ## configure webdoc-sample
 
 Edit webdoc-sample/conf/AppDefault
 + Default configuration consider that webdoc-tools & webdoc-sample site within the same parent directory.
-+ If needed change GEM_FILE + Doc_TOOLS to point on the right path.
++ If needed, update Doc_TOOLS to the right path.
 
 ## generate a 1st site from your template
 ```

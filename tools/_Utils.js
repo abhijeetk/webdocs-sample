@@ -39,11 +39,6 @@ var GetConfig= function (extention) {
             console.log ("Hoop --doctool=xxx needed (DocTools not at: [%s])\n-- %s", sitecfg.DOCS_TOOLS, error);
             process.exit(1);
         }
-
-        // if GEM_FILE path is not defined try to guess one
-        if (!sitecfg.GEM_FILE) {
-            config.GEM_FILE= path.join(sitecfg.DOCS_TOOLS, config.GEM_FILE);
-        }
         
         // if default change default language
         if (config.LANG_DEFAULT) process.env.LANG_DEFAULT=config.LANG_DEFAULT;
