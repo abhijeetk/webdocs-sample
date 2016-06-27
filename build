@@ -29,7 +29,7 @@ function main () {
   process.chdir (path.dirname (process.argv[1]));  
   
   var success=0;  
-  if (argv.verbose) console.log ("Starting");
+  if (argv.verbose) console.log ("Start cmd=%s", process.argv[1]);
   
   if (argv.all) {
      argv.build=true;
@@ -47,7 +47,12 @@ function main () {
      argv.tocs = true;
      argv.dict = true;
   }
-    
+  
+  // HOOPS: fetch is asynchronous and not compatible with anything alse
+  if (argv.fetch && (argv.html || argv.tocs || argv.dict || argv.vers || argv.defs)) {
+      console.log ("BUGS: in current version [--fetch] is only compatible with [--clean, --force]");
+      process.exit();    
+  }   
     
   if (argv.clean) {
       if (argv.verbose) console.log ("  - clean = [%s]", config.CLEAN_ALL);

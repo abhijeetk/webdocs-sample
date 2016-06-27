@@ -7,12 +7,11 @@
 # =======
 title:          "WebDocs Sample"
 title_suffix:   "by IoT.bzh"
-url:            "https://cordova.apache.org" # the base hostname & protocol
+url:            "https://docs.iot.bzh" # the base hostname & protocol
 baseurl:        "" # the subpath of the site, e.g. /blog; NOTE: no trailing slash
 rss_path:       /feed.xml
 description: >
-    Apache Cordova is a set of device APIs that allow a web mobile app
-    developer to access native device function from JavaScript.
+   IOT.BZH documentation testing website for AGL (Automotive Grade Linux)
 
 excerpt_separator: <!--more-->
 
@@ -93,4 +92,9 @@ kramdown:
 exclude:
     - static/css-src
 
-algolia_api_key: "0a916ab198bd93d031aa70611271e42e"
+algolia:
+    - index : "iotbzh"
+    - apikey: "0a916ab198bd93d031aa70611271e42e"
+    
+disqus:
+    - name: "iotbzh"

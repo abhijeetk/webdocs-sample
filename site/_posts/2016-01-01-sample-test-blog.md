@@ -4,9 +4,9 @@ author:
     name: Fulup Ar Foll
     url: http://iot.bzh
 title:  "This is a sample post"
-date:   2016-06-24 15:45:04 -5
+date:   2016-01-01 00:00:00
 categories: blog
-tags: news
+tags: test
 ---
 
 This is a sample of post for webdoc-tools 

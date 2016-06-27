@@ -1,81 +1,57 @@
 # REFERENCE ENTRY:
 # -
-#     src:                                                  # required
-#         repoName:    "apache/cordova-cli"                 # required
-#         packageName: "cordova"                            # if empty: second part of repoName
-#         commit:      "master"                             # if empty: latest in NPM
-#         path:        "relative/path/to/file/in/repo.md"   # if empty: "README.md"
-#     dest:                                                 # required
-#         path:  "relative/path/in/docs/version.md"       # required (WARNING: should be .md)
--
-    src:
-        repoName: "iotbzh/afm-main"
-        packageName: "afm_main overview"
-        commit: "1.0"
-        path: "doc/overview.md"
-    dest:
-        path: "afm_main/doc/overview.md"
--
-    src:
-        repoName: "iotbzh/afm-main"
-        packageName: "afm_main system-daemon"
-        commit: "1.0"
-        path: "doc/afm-system-daemon.md"
-    dest:
-        path: "afm_main/doc/afm-system-daemon.md"
--
-    src:
-        repoName: "iotbzh/afm-main"
-        packageName: "afm_main user-daemon"
-        commit: "1.0"
-        path: "doc/afm-user-daemon.md"
-    dest:
-        path: "afm_main/doc/afm-user-daemon.md"
--
-    src:
-        repoName: "iotbzh/afb-daemon"
-        packageName: "afb_daemon overview"
-        commit: "1.0"
-        path: "doc/afb-overview.md"
-    dest:
-        path: "afb_daemon/doc/afb-overview.md"
--
-    src:
-        repoName: "iotbzh/afb-daemon"
-        packageName: "afb_daemon writing app"
-        commit: "1.0"
-        path: "doc/afb-application-writing.md"
-    dest:
-        path: "afb_daemon/doc/afb-application-writing.md"
--
-    src:
-        repoName: "iotbzh/afb-daemon"
-        packageName: "afb_daemon overview"
-        commit: "1.0"
-        path: "doc/afb-plugins-overview.md"
-    dest:
-        path: "afb_daemon/doc/afb-plugins-overview.md"
--
-    src:
-        repoName: "iotbzh/afb-daemon"
-        packageName: "afb_daemon writing bindings"
-        commit: "1.0"
-        path: "doc/afb-plugin-writing.md"
-    dest:
-        path: "afb_daemon/doc/afb-plugin-writing.md"
--
-    src:
-        repoName: "iotbzh/afb-daemon"
-        packageName: "afb_daemon basic test"
-        commit: "1.0"
-        path: "doc/afb-tests-overview.md"
-    dest:
-        path: "afb_daemon/doc/afb-tests-overview.md"
--
-    src:
-        repoName: "iotbzh/afb-daemon"
-        packageName: "afb_daemon vocabulary"
-        commit: "1.0"
-        path: "doc/afb-daemon-vocabulary.md"
-    dest:
-        path: "afb_daemon/doc/afb-daemon-vocabulary.md"
+#   url_fetch : gitweb fetch URL (format string with token %repo% %uri%
+#      GERRIT_FETCH=  "https://gerrit.automotivelinux.org/gerrit/gitweb?p=%repo%;a=blob_plain;f=%source%;hb=%commit%"
+#      GITHUB_FETCH= "https://raw.githubusercontent.com/%repo%/%commit%/%source%"
+#   repository: git repository name
+#      GITHUB_EDIT= "https://raw.github.com/%repo%/blob/%commit%/%source%"
+#   git_commit: git commit when not default
+#   destination_prefix: optional destination prefix 
+#   documents:
+#     -
+#       source  : "source patch within url_fetch"
+#       destination  : "optional: destination path default=path.join(destination_prefix+source)"
+#       label: "optional: friendly name for submenu default=basename(source) overloaded by file content"
+#       title: "optional: info about document (default label, overloaded by file content)"
+#
+
+url_fetch  : "GERRIT_FETCH"
+commit     : "master"
+#git_commit : # default defined in _tocs/xxxx/latest.yml
+#dst_prefix : # destination_path = destination_prefix + (document.destination || document.source)
+
+repositories:
+    
+- 
+    git_name   : "src/app-framework-main.git"
+    dst_prefix : "afm_main"
+    documents  :        
+    - 
+        label: "afm overview"
+        source: "doc/overview.md"
+    -
+        source: "doc/afm-system-daemon.md"
+    -
+        source: "doc/afm-user-daemon.md"
+        
+- 
+    git_name   : "src/app-framework-binder.git"
+    dst_prefix : "afb_daemon"
+    documents  :        
+
+    -  
+        source: "doc/afb-overview.md"
+    -
+        source: "doc/afb-application-writing.md"
+    -
+        source: "doc/afb-plugins-overview.md"
+    -
+        label: "afb writing bindings"
+        source: "doc/afb-plugin-writing.md"
+    -
+        label: "afb basic test"
+        source: "doc/afb-tests-overview.md"
+    -
+        label: "afb vocabulary"
+        source: "doc/afb-daemon-vocabulary.md"
+ 

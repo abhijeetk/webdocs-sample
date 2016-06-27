@@ -19,3 +19,7 @@
             name: Battery Status
             url: reference/cordova-plugin-battery-status/index.html
             description: Get events for device battery level.
+        - 
+            name: Camera
+            url: reference/cordova-plugin-camera/index.html
+            description: Take pictures with the device camera.

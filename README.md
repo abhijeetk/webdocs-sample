@@ -27,9 +27,9 @@ Edit webdoc-sample/conf/AppDefault
 ## generate a 1st site from your template
 ```
  ./build --clean  # deleted all generated file if any
- ./build --fetch  --verbose # collect doc from github
+ ./build --fetch  --verbose # collect doc from github (fetch list in site/_tocs/*/fetch_files.yml)
  ./build --config --verbose # generate tocs and other configfile
- ./build --html --serve --watch  # start a local webserver and wait for site source modification
+ ./build --html --serve --watch --incremental # start a local webserver and wait for site source modification
 
   browser on http://localhost:4000
 
@@ -45,6 +45,8 @@ Edit webdoc-sample/conf/AppDefault
 - site/_tocs/*/toc_VERSION_LANGUAGE.yml TOC(TableOfContend) and GitFetch definition (ex: appfw)
 - site/_layouts holds page template 
 
+- register at https://community.algolia.com/docsearch/ and update your apikey into conf/_config.yml
+
 
 ## bugs
 
@@ -52,3 +54,4 @@ Edit webdoc-sample/conf/AppDefault
  --fetch is asynchronous combining --fetch with other options will fail ./build --all --serve --watch
  --watch to automatically regenerate pages on markdown file, you should force "./build --configs" when changing TOC or versions.
 ```
+

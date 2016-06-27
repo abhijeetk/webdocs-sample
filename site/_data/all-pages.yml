@@ -4,6 +4,7 @@
 /specs/en/dev/guide/platforms/android/lifecycle.html: true
 /specs/fr/dev/guide/platforms/android/lifecycle.html: true
 /_posts/2016-06-24-sample-test-blog.html: true
+/_posts/2016-06-27-security-white-paper.html: true
 /appfw/en/dev/index.html: true
 /appfw/en/dev/reference/afb_daemon/doc/afb-application-writing.html: true
 /appfw/en/dev/reference/afb_daemon/doc/afb-daemon-vocabulary.html: true
@@ -23,3 +24,4 @@
 /specs/en/dev/index.html: true
 /specs/en/dev/reference/cordova-cli/index.html: true
 /specs/en/dev/reference/cordova-plugin-battery-status/index.html: true
+/specs/en/dev/reference/cordova-plugin-camera/index.html: true
