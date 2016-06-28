@@ -51,13 +51,13 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript">
-        var disqus_developer = 1; // this would set it to developer mode
+        var disqus_developer = {{ site.disqus.devmode }}; // this would set it to developer mode
     </script>
 
     <!-- JS -->
     <script defer type="text/javascript" src="{{ site.baseurl }}/static/js/lib/jquery-2.1.1.min.js"></script>
     <script defer type="text/javascript" src="{{ site.baseurl }}/static/js/lib/bootstrap.min.js"></script>
-    <script defer type="text/javascript" src="{{ site.baseurl }}/static/js/lib/ZeroClipboard.js"></script>
+<!--    <script defer type="text/javascript" src="{{ site.baseurl }}/static/js/lib/ZeroClipboard.js"></script>-->
 
     {% include analytics.html %}
 </head>

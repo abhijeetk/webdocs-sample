@@ -7,7 +7,7 @@
 # =======
 title:          "WebDocs Sample"
 title_suffix:   "by IoT.bzh"
-url:            "https://docs.iot.bzh" # the base hostname & protocol
+url:            "http://docs.iot.bzh" # the base hostname & protocol
 baseurl:        "" # the subpath of the site, e.g. /blog; NOTE: no trailing slash
 rss_path:       /feed.xml
 description: >
@@ -92,9 +92,18 @@ kramdown:
 exclude:
     - static/css-src
 
-algolia:
-    - index : "iotbzh"
-    - apikey: "0a916ab198bd93d031aa70611271e42e"
+algolia: # https://community.algolia.com/docsearch/
+    index : "iotbzh"
+    apikey: "0a916ab198bd93d031aa70611271e42e"
     
-disqus:
-    - name: "iotbzh"
+disqus: # check https://disqus.com/admin
+    name: "docsiotbzh"
+    devmode: 0
+    
+twitter:
+    hashtag: autogradelinux
+    widgetid: 629424968011386884
+    
+slack:
+    host: https://iotbzh.slack.com
+    

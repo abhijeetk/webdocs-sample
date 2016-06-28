@@ -3,7 +3,7 @@
 /specs/fr/dev/guide/platforms/android/tools.html: true
 /specs/en/dev/guide/platforms/android/lifecycle.html: true
 /specs/fr/dev/guide/platforms/android/lifecycle.html: true
-/_posts/2016-06-24-sample-test-blog.html: true
+/_posts/2016-01-01-sample-test-blog.html: true
 /_posts/2016-06-27-security-white-paper.html: true
 /appfw/en/dev/index.html: true
 /appfw/en/dev/reference/afb_daemon/doc/afb-application-writing.html: true
@@ -15,9 +15,9 @@
 /appfw/en/dev/reference/afm_main/doc/afm-system-daemon.html: true
 /appfw/en/dev/reference/afm_main/doc/afm-user-daemon.html: true
 /appfw/en/dev/reference/afm_main/doc/overview.html: true
+/blueprints/index.html: true
 /contribute/contribute_guidelines.html: true
 /contribute/issues.html: true
-/plugins/faq.html: true
 /privacy/index.html: true
 /specs/en/deprecated.html: true
 /specs/en/dev/guide/overview/index.html: true
