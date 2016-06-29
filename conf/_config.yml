@@ -8,10 +8,13 @@
 title:          "WebDocs Sample"
 title_suffix:   "by IoT.bzh"
 url:            "http://docs.iot.bzh" # the base hostname & protocol
-baseurl:        "" # the subpath of the site, e.g. /blog; NOTE: no trailing slash
-rss_path:       /feed.xml
 description: >
    IOT.BZH documentation testing website for AGL (Automotive Grade Linux)
+
+baseurl:        "" # the subpath of the site, e.g. /blog; NOTE: no trailing slash
+docsurl:        "/docs" # docsearch entry point 
+rss_path:       /misc/feed.xml
+
 
 excerpt_separator: <!--more-->
 
@@ -106,4 +109,10 @@ twitter:
     
 slack:
     host: https://iotbzh.slack.com
+    
+linkto:
+    jira_specs  : https://jira.automotivelinux.org/browse/TEST-10?jql=
+    jira_users  : https://jira.automotivelinux.org/browse/SPEC/?selectedTab=com.atlassian.jira.jira-projects-plugin:summary-panel
+    code_contrib: https://git.automotivelinux.org/gerrit/#/q/status:open
+    mail_lists  : https://lists.linuxfoundation.org/mailman/listinfo/automotive-discussions
     

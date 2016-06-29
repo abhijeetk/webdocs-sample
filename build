@@ -54,6 +54,12 @@ function main () {
       process.exit();    
   }   
     
+  if (argv.crawl) {
+      if (argv.verbose) console.log ("  - crawl = [%s]", config.CRAWL_SITE);
+      utils.DocsTool(config.CRAWL_SITE, argv);
+      success++;
+  }
+  
   if (argv.clean) {
       if (argv.verbose) console.log ("  - clean = [%s]", config.CLEAN_ALL);
       utils.DocsTool(config.CLEAN_ALL, argv);
@@ -61,7 +67,7 @@ function main () {
   }
   
   if (argv.fetch) {
-      if (argv.verbose) console.log ("  - fetch = [%s]", config.FETCH_DOCS);
+      if (argv.verbose) console.log ("  - fetch = [%s] with tcodir=[%s]", config.FETCH_DOCS, config.TOCS_DIR);
       utils.DocsTool(config.FETCH_DOCS, argv);
       success++;
   }
@@ -116,6 +122,7 @@ function main () {
       console.log (' --clean (clean all generated files)');
       console.log (' --fetch [--dumponly --force] (update references from git default=%s)', config.FETCH_CONFIG);
       console.log (' --push  (push site to "%s")', config.PUSH_DEST);
+      console.log (' --crawl [--prod] (check invalid links)');
       console.log (' --configs (vers+defs+tocs+defs)');
       console.log (' --build (config+html)');
       console.log (' --all (build+push [but not fetch])');

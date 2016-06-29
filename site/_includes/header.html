@@ -15,20 +15,30 @@
                 <div class="nav_bar_center">
                     <ul class="nav navbar-nav">
                         <li {% if page.specs_tab %}class="active"{% endif %}>
-                            <a href="{{ site.baseurl }}/specs/en/{{ site.default_linked_docs_version }}/">Specification</a>
+                            <a href="{{ site.docs }}/architecture/en/{{ site.default_linked_docs_version }}/">ArchitectureGuide</a>
                         </li>
+                        <li {% if page.specs_tab %}class="active"{% endif %}>
+                            <a href="{{ site.docs }}/quickstart/en/{{ site.default_linked_docs_version }}/">GetStarted</a>
+                        </li>
+                        
+                        
                         <li {% if page.appfw_tab %}class="active"{% endif %}>
-                            <a href="{{ site.baseurl }}/components/en/{{ site.default_linked_docs_version }}/">Components</a>
+                            <a href="{{ site.docs }}/bindings/en/{{ site.default_linked_docs_version }}/">BindingAPI</a>
+                        </li>
+
+                        <li {% if page.appfw_tab %}class="active"{% endif %}>
+                            <a href="{{ site.docs }}/sdk-tools/en/{{ site.default_linked_docs_version }}/">SDK&Tools</a>
+                        </li>
+
+                        <li {% if page.appfw_tab %}class="active"{% endif %}>
+                            <a href="{{ site.docs }}/hardware/en/{{ site.default_linked_docs_version }}/">HardwareSupport</a>
                         </li>
 
                         <li {% if page.blog_tab %}class="active"{% endif %}>
-                            <a href="{{ site.baseurl }}/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                            <a href="{{ site.baseurl }}/techpost" id="blog_button">TechPost<span class="badge" id="new_blog_count"></span></a>
                         </li>
                         <li {% if page.contribute_tab %}class="active"{% endif %}>
                             <a href="{{ site.baseurl }}/contribute">Contribute</a>
-                        </li>
-                        <li>
-                            <a href="{{ site.baseurl }}/#getstarted">Get Started</a>
                         </li>
                         <li>
                             <form class="navbar-form navbar-right" id="header-search-form" role="search">

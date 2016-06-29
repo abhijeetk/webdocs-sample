@@ -32,7 +32,7 @@ var GetConfig= function (extention) {
             sitecfg.DOCS_TOOLS= argv.docstool;
         }
 
-        process.env.SITE_PATH = sitecfg.DOCS_DIR || "site";
+        process.env.SITE_PATH = sitecfg.SITE_DIR || "site";
         try {
             config= require(path.join("..", sitecfg.DOCS_TOOLS, "/tools/lib/_Config"));
         } catch(error){

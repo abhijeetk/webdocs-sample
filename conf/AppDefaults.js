@@ -25,10 +25,11 @@ config = {
     DST_DEVL   : "build-dev",
     VER_CURRENT: "2.x",
     
-    DOCS_DIR   : "site",
+    SITE_DIR   : "site",
     DOCS_TOOLS : "../webdocs-tools",
     
     PUSH_DEST  : "apache@www.ovh.iot:/srv/www/iotbzh/webdoc-sample/",
+    CRAWL_PROD : "http://docs.iot.bzh",
 
     LANGUAGES: ['en','fr'],
     
