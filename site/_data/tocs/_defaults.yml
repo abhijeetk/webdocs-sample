@@ -2,32 +2,64 @@
 defaults:
     - 
         scope:
-            path: appfw/en
+            path: docs/architecture/en
         values:
             language: en
-            layout: appfw-en
+            layout: architecture-en
     - 
         scope:
-            path: appfw/en/dev
+            path: docs/architecture/en/dev
         values:
             version: dev
-            tocdir: appfw
+            tocdir: architecture
             tocfile: _toc_dev_en
             change_frequency: monthly
             priority: 0.8
             current: true
     - 
         scope:
-            path: specs/en
+            path: docs/bindings/en
         values:
             language: en
-            layout: specs-en
+            layout: bindings-en
     - 
         scope:
-            path: specs/en/dev
+            path: docs/bindings/en/dev
         values:
             version: dev
-            tocdir: specs
+            tocdir: bindings
+            tocfile: _toc_dev_en
+            change_frequency: monthly
+            priority: 0.8
+            current: true
+    - 
+        scope:
+            path: docs/hardware/en
+        values:
+            language: en
+            layout: hardware-en
+    - 
+        scope:
+            path: docs/hardware/en/dev
+        values:
+            version: dev
+            tocdir: hardware
+            tocfile: _toc_dev_en
+            change_frequency: monthly
+            priority: 0.8
+            current: true
+    - 
+        scope:
+            path: docs/quickstart/en
+        values:
+            language: en
+            layout: quickstart-en
+    - 
+        scope:
+            path: docs/quickstart/en/dev
+        values:
+            version: dev
+            tocdir: quickstart
             tocfile: _toc_dev_en
             change_frequency: monthly
             priority: 0.8

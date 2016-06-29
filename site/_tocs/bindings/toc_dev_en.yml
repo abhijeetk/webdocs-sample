@@ -5,10 +5,11 @@
     children:
         - url: guide/overview/index.html
 -
-    name: Create application
+    name: Application Framework
     children:
-        - url: reference/cordova-cli/index.html
-        - url: reference/cordova-plugin-battery-status/index.html
-        - url: reference/cordova-plugin-camera/index.html
+        - url: reference/ap/main/afm-system-daemon.html
+        - url: reference/ap/main/afm-user-daemon.html
+        - url: reference/ap/binder/afb-application-writing.html
+        - url: reference/ap/binder/afb-bindings-writing.html
 
     

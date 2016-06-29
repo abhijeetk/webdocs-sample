@@ -12,9 +12,11 @@ set some constants
 {% assign ALL_PAGES = site.data.all-pages %}
 {% assign TOCSDIR = site.data.tocs %}
 {% assign TOCFILE = TOCSDIR.[page.tocdir].[page.tocfile] %}
+{% assign DOCSDIR = site.docsurl %}
 
 {% capture VERSION_ROOT %}/{{page.tocdir}}/{{ page.language }}/{{ page.version }}/{% endcapture %}
 {% capture LANGUAGE_ROOT %}/{{page.tocdir}}/{{ page.language }}/{% endcapture %}
+{% capture PATH_TO_DOCS %}/{{site.docsurl}}/a{% endcapture %}
 
 {% assign MY_ENTRY = page.url | replace: VERSION_ROOT,"" %}
 {% assign my_entry_parts = MY_ENTRY | split: "/" %}
@@ -24,7 +26,7 @@ PATH_TO_ROOT: path from here to version root, replacing all parts except the las
 NOTE:
      the capture is a single line because extraneous whitespace would screw up the URI it produces
 {% endcomment %}
-{% capture PATH_TO_ROOT %}{% for item in my_entry_parts %}{% if forloop.rindex > 1 %}../{% endif %}{% endfor %}{% endcapture %}
+{% capture PATH_TO_ROOT %}{% for item in my_entry_parts %}{% if forloop.rindex > 2 %}../{% endif %}{% endfor %}{% endcapture %}
 
 <div class="docs container">
 
@@ -199,7 +201,7 @@ NOTE:
                                     {% assign other_version_url = other_version_root %}
                                 {% endunless %}
 
-                                <a href="{{ site.baseurl }}{{ other_version_url }}" class="{% unless ALL_PAGES contains other_version_url %}missing-page{% endunless %}">
+                                <a href="{{ site.docsurl }}{{ other_version_url }}" class="{% unless ALL_PAGES contains other_version_url %}missing-page{% endunless %}">
                                     {% if page.version == other_version %}
                                         <span class="selected">
                                             {{ version_entry_string }}
@@ -234,13 +236,13 @@ NOTE:
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        {{ page.in_development_text }}
+                        {{ site.message.indev }}
                         <a href="{{ site.baseurl }}{{ latest_url }}">
                             {{ page.click_here_text }}
                         </a>
                     </div>
                 {% endif %}
-
+                
                 <!-- outdated warning -->
                 {% if page.version != 'dev' and page.version != site.latest_docs_version %}
                     <div class="alert docs-alert alert-danger" role="alert">
@@ -254,18 +256,6 @@ NOTE:
                     </div>
                 {% endif %}
 
-                <!-- plugin version warning -->
-                {% if page.plugin_name and page.plugin_version %}
-                    <div class="alert alert-warning docs-alert" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        {{ page.plugin_version_text }} {{ page.plugin_version }}.
-                        <a href="https://github.com/apache/{{ page.plugin_name }}/releases">
-                            {{ page.visit_github_text }}
-                        </a>
-                    </div>
-                {% endif %}
 
                 <div id="page-toc-source">
                     {{ content }}

@@ -14,3 +14,4 @@ www/docs/*/dev/reference
 node_modules/
 Gemfile.lock
 /nbproject/private/
+.sass-cache

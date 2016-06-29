@@ -46,6 +46,11 @@ logo:
     navbar  :  /static/img/iot_bzh_full.svg
     textonly:  /static/img/iot_bzh_full.svg
     stamp   :  /static/img/iot_bzh_stamp_white.png
+    
+message:
+    indev : "Draft version of documentation under development may change!"
+    
+ganalytics: xxxxxxxx    
 
 # NOTE:
 #      this value gets overwritten in _defaults.yml, which is a generated file
@@ -94,7 +99,7 @@ kramdown:
 # exclude these directories from the build
 exclude:
     - static/css-src
-
+    
 algolia: # https://community.algolia.com/docsearch/
     index : "iotbzh"
     apikey: "0a916ab198bd93d031aa70611271e42e"
@@ -115,4 +120,5 @@ linkto:
     jira_users  : https://jira.automotivelinux.org/browse/SPEC/?selectedTab=com.atlassian.jira.jira-projects-plugin:summary-panel
     code_contrib: https://git.automotivelinux.org/gerrit/#/q/status:open
     mail_lists  : https://lists.linuxfoundation.org/mailman/listinfo/automotive-discussions
+    
     

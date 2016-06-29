@@ -15,31 +15,28 @@
 #       title: "optional: info about document (default label, overloaded by file content)"
 #
 
-url_fetch  : "GITHUB_FETCH"
-url_edit   : "GITHUB_EDIT"
-git_commit : "master"
-#dst_prefix : # destination_path = destination_prefix + (document.destination || document.source)
-
-repositories:
-    
+url_fetch  : "GERRIT_FETCH"
+repositories:   
 - 
-    git_name   : "apache/cordova-cli"
-    documents  :
-    - 
-        label: "cordova"
-        source: "doc/readme.md"
-        destination: "cordova-cli/index.md"
-
--   
-    git_name:  "apache/cordova-plugin-battery-status"
-    documents:
-    -    
-        source: "README.md"
-        destination: "cordova-plugin-battery-status/index.md"
-
--        
-    git_name:  "apache/cordova-plugin-camera"
-    documents:
-    -
-        source: "README.md"
-        destination: "cordova-plugin-camera/index.md"
+    git_name   : "src/app-framework-main.git"
+    dst_prefix : "ap/main"
+    src_prefix : "doc"
+    documents  :        
+    -   source: "overview.md"
+        label: "afm overview"
+    -   source: "afm-system-daemon.md"
+    -   source: "afm-user-daemon.md"
+        
+- 
+    git_name   : "src/app-framework-binder.git"
+    src_prefix : "doc"
+    dst_prefix : "ap/binder"
+    documents  :        
+    - source: "afb-overview.md"
+    - source: "afb-application-writing.md"
+    - source: "afb-bindings-overview.md"
+    - source: "afb-bindings-writing.md"
+    - source: "afb-tests-overview.md"
+      label : "afb basic test"
+    - source: "afb-daemon-vocabulary.md"
+      label : "afb vocabulary"

@@ -27,9 +27,8 @@ Edit webdoc-sample/conf/AppDefault
 ## generate a 1st site from your template
 ```
  ./build --clean  # deleted all generated file if any
- ./build --fetch  --verbose # collect doc from github (fetch list in site/_tocs/*/fetch_files.yml)
- ./build --config --verbose # generate tocs and other configfile
- ./build --html --serve --watch --incremental # start a local webserver and wait for site source modification
+ ./build --fetch [--force]  # collect doc from github (fetch list in site/_tocs/*/fetch_files.yml)
+ ./build --build --serve --watch --incremental # build config/tocs, generate html and start a local webserver
 
   browser on http://localhost:4000
 
@@ -51,7 +50,6 @@ Edit webdoc-sample/conf/AppDefault
 ## bugs
 
 ```
- --fetch is asynchronous combining --fetch with other options will fail ./build --all --serve --watch
  --watch to automatically regenerate pages on markdown file, you should force "./build --configs" when changing TOC or versions.
 ```
 

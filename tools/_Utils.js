@@ -19,6 +19,7 @@ var path= require("path");
 var fs  = require("fs");
 var argv= require("./_Minimist")(process.argv.slice(2));
 var config; // will be set at 1st getConfig call
+var requests = [];
 
 var GetConfig= function (extention) {
     
@@ -49,7 +50,7 @@ var GetConfig= function (extention) {
     return config;
 };
 
-var DocsTool = function (filename) {
+var RequestQueue = function (filename) {
     var docstool = require (path.join("..", config.DOCS_TOOLS, filename));
     if (typeof docstool !== "function") {
         console.log ("HOOP: not a valid node.js function [%s]", path.join (config.DOCS_TOOLS, filename));
@@ -57,13 +58,31 @@ var DocsTool = function (filename) {
     }
     
     var arguments = [].slice.call(arguments, 1);
-    return docstool (config, arguments[0]);
+    requests.push ({filename: filename, cmd: docstool, config: config, argv: arguments[0]});
+};
+
+var ExecQueue = function (argv) {
+    var idx=0;
+    
+    function ExecNext() {
+        
+        if (idx < requests.length) { 
+            if (argv.verbose) console.log ("  - Process: %s",  requests[idx].filename);
+            status = requests[idx].cmd (requests[idx].config, requests[idx].argv, ExecNext);
+            idx++;
+            if (!status) ExecNext();
+        }
+    }
+
+    // execute 1st function
+    ExecNext();    
 };
 
 var UtilMethods = {
     
-  GetConfig : GetConfig,  
-  DocsTool  : DocsTool,
+  GetConfig     : GetConfig,  
+  RequestQueue  : RequestQueue,
+  ExecQueue     : ExecQueue,
   
   LAST: undefined
   };

@@ -22,15 +22,11 @@ git_commit : "master"
 
 repositories:    
 - 
-    git_name   : "iotbzh/aglonporter"
+    git_name   : "iotbzh/agl-porter"
     documents  :
-    - 
-        label : "booting-sdk"
-        source: "guide/booting-agl-sdk.md"
+    - source: "guide/booting-agl-sdk.md"
 - 
-    git_name   : "iotbzh/aglonqmu"
+    git_name   : "iotbzh/agl-qmu"
     documents  :
-    - 
-        label : "booting-sdk"
-        source: "guide/booting-agl-sdk.md"
+    - source: "guide/booting-agl-sdk.md"
 

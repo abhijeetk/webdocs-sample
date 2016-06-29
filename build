@@ -47,64 +47,58 @@ function main () {
      argv.tocs = true;
      argv.dict = true;
   }
-  
-  // HOOPS: fetch is asynchronous and not compatible with anything alse
-  if (argv.fetch && (argv.html || argv.tocs || argv.dict || argv.vers || argv.defs)) {
-      console.log ("BUGS: in current version [--fetch] is only compatible with [--clean, --force]");
-      process.exit();    
-  }   
-    
+        
   if (argv.crawl) {
       if (argv.verbose) console.log ("  - crawl = [%s]", config.CRAWL_SITE);
-      utils.DocsTool(config.CRAWL_SITE, argv);
+      utils.RequestQueue(config.CRAWL_SITE, argv);
       success++;
   }
   
   if (argv.clean) {
       if (argv.verbose) console.log ("  - clean = [%s]", config.CLEAN_ALL);
-      utils.DocsTool(config.CLEAN_ALL, argv);
+      utils.RequestQueue(config.CLEAN_ALL, argv);
       success++;
   }
   
   if (argv.fetch) {
       if (argv.verbose) console.log ("  - fetch = [%s] with tcodir=[%s]", config.FETCH_DOCS, config.TOCS_DIR);
-      utils.DocsTool(config.FETCH_DOCS, argv);
+      utils.RequestQueue(config.FETCH_DOCS, argv);
       success++;
   }
   
   if (argv.vers || argv.versions) {
       if (argv.verbose) console.log ("  - versions = [%s]", config.GEN_VERS);
-      utils.DocsTool(config.GEN_VERS, argv);
+      utils.RequestQueue(config.GEN_VERS, argv);
       success++;
   }
   
   if (argv.defs || argv.defaults) {
       if (argv.verbose) console.log ("  - defaults = [%s]", config.GEN_DEFS);
-      utils.DocsTool(config.GEN_DEFS, argv);
+      utils.RequestQueue(config.GEN_DEFS, argv);
       success++;
   }
  
   if (argv.tocs) {
       if (argv.verbose) console.log ("  - tocs = [%s]", config.GEN_TOCS);
-      utils.DocsTool(config.GEN_TOCS, argv);
+      utils.RequestQueue(config.GEN_TOCS, argv);
       success++;
   }
   
   if (argv.dict) {
       if (argv.verbose) console.log ("  - dict = [%s]", config.GEN_DICT);
-      utils.DocsTool(config.GEN_DICT, argv);
+      utils.RequestQueue(config.GEN_DICT, argv);
       success++;
   }
   
   if (argv.html) {
       if (argv.verbose) console.log ("  - html = [%s]", config.GEN_HTML);
-      utils.DocsTool(config.GEN_HTML, argv);
+      utils.RequestQueue(config.GEN_HTML, argv);
       success++;
   }
   
   if (argv.push) {
       if (argv.verbose) console.log ("  - push = [%s]", config.PUSH_SITE);
-      utils.DocsTool(config.PUSH_SITE, argv);
+      utils.RequestQueue(config.PUSH_SITE, argv);
       success++;
   }
  
@@ -128,6 +122,9 @@ function main () {
       console.log (' --all (build+push [but not fetch])');
       console.log (' --verbose (display steps)');
       console.log ('\n');
+  } else {
+      if (argv.verbose) console.log ("----");
+      utils.ExecQueue(argv);
   }
  
 }
