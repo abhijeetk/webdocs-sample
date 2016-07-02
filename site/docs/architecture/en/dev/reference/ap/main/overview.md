@@ -18,6 +18,18 @@ current implementation and the content of this document differ.
 In case of differences, it is assumed that this document is right
 and the implementation is wrong.
 
+~~~ 
+Alice->Bob: Hello Bob, how are you?
+Note right of Bob: Bob thinks
+Bob-->Alice: I am good thanks!
+~~~
+
+~~~ UML
+ Alice->Bob: Hello Bob, how are you?
+ Note right of Bob: Bob thinks
+ Bob-->Alice: I am good thanks!
+~~~
+
 
 Introduction
 ------------

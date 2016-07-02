@@ -6,7 +6,7 @@ author:
 title:  "Security White Paper"
 date:   2016-01-10 12:45:04
 categories: blog
-tags: test
+tags: security
 ---
 
 Cars are expensive pieces of equipment, yet they represent a huge mass market.

@@ -7,7 +7,7 @@
                 {{ entry.name }}
             </span>
         {% else %}
-            <a class="{% if include.my_entry == entry.url %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
+            <a class="{% if include.my_entry == entry.url %}this-page{% endif %}" href="{{ include.version_root }}{{ entry.url }}">
                 {{ entry.name }}
             </a>
             {% if include.my_entry == entry.url %}
@@ -21,7 +21,7 @@
         {% if include.my_entry == entry.url %}<div id="page-toc" class="page-toc"></div>{% endif %}
 
         {% if entry.children %}
-        {% include toc_recursive_main.html entries=entry.children my_entry=include.my_entry path_to_root=include.path_to_root %}
+        {% include toc_recursive_main.html entries=entry.children my_entry=include.my_entry version_root=include.version_root %}
         {% endif %}
     </li>
     {% endfor %}

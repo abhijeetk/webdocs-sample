@@ -26,6 +26,8 @@ In a near future, JSON-RPC protocol should be added to complete current x-afb-js
 
 Two examples of HTML5 applications are given:
 
+![image](test.svg)
+
 - [afb-client](https://gerrit.automotivelinux.org/gerrit/gitweb?p=src/app-framework-demo.git;a=tree;f=afb-client) a simple "hello world" application template
 
 - [afm-client](https://gerrit.automotivelinux.org/gerrit/gitweb?p=src/app-framework-demo.git;a=tree;f=afm-client) a simple "Home screen" application template
@@ -246,7 +248,7 @@ only in case of success.
 
 #### Subfield request.token
 
-**token** is of type string. It is sent either at session creation 
+**token** is of type string. It is sent either at session creation
 or when the token is refreshed.
 
 #### Subfield request.uuid
@@ -298,4 +300,3 @@ and the name of event within the API.
 ### Field data
 
 This field data if present holds the data carried by the event.
-

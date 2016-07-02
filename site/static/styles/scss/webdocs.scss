@@ -222,6 +222,14 @@ code {
     border-radius: 4px !important;
 }
 
+H1 {
+    display: none;
+}
+
+.error {
+    color: red;
+}
+
 @import '_home';
 @import '_blog';
 @import '_plugins';

@@ -10,5 +10,6 @@ tags: test
 ---
 
 This is a sample of post for webdoc-tools 
+<!--more-->
 
 Be sure to [subscribe]({{ site.baseurl }}{{ site.rss_path }}) using RSS

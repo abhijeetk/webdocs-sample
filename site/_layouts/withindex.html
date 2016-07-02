@@ -1,7 +1,14 @@
 ---
 layout: base
 docs_tab: true
-analytics_id: UA-64283057-1
+analytics_id: {{site.ganalytics}}
+
+scripts: 
+  - lib/raphael-min.js
+  - lib/underscore-min.js
+  - lib/sequence-diagram-min.js
+  - lib/flowchart-latest.js
+  - process-uml.js
 ---
 
 {% include header.html %}
@@ -10,29 +17,21 @@ analytics_id: UA-64283057-1
 set some constants
 {% endcomment %}
 {% assign ALL_PAGES = site.data.all-pages %}
-{% assign TOCSDIR = site.data.tocs %}
-{% assign TOCFILE = TOCSDIR.[page.tocdir].[page.tocfile] %}
 {% assign DOCSDIR = site.docsurl %}
+{% assign TOCSDIR = site.data.tocs %}
+{% assign TOCFILE = TOCSDIR[page.tocdir][page.tocfile] %}
 
-{% capture VERSION_ROOT %}/{{page.tocdir}}/{{ page.language }}/{{ page.version }}/{% endcapture %}
-{% capture LANGUAGE_ROOT %}/{{page.tocdir}}/{{ page.language }}/{% endcapture %}
-{% capture PATH_TO_DOCS %}/{{site.docsurl}}/a{% endcapture %}
+{% capture VERSION_ROOT %}{{DOCSDIR}}/{{page.tocdir}}/{{ page.language }}/{{ page.version }}/{% endcapture %}
+{% capture LANGUAGE_ROOT %}{{DOCSDIR}}/{{page.tocdir}}/{{ page.language }}/{% endcapture %}
 
 {% assign MY_ENTRY = page.url | replace: VERSION_ROOT,"" %}
 {% assign my_entry_parts = MY_ENTRY | split: "/" %}
-
-{% comment %}
-PATH_TO_ROOT: path from here to version root, replacing all parts except the last one with '../'
-NOTE:
-     the capture is a single line because extraneous whitespace would screw up the URI it produces
-{% endcomment %}
-{% capture PATH_TO_ROOT %}{% for item in my_entry_parts %}{% if forloop.rindex > 2 %}../{% endif %}{% endfor %}{% endcapture %}
 
 <div class="docs container">
 
     <!-- Table of Contents -->
     <div class="hidden-xs hidden-sm col-md-4 col-lg-3 site-toc-container">
-        {% include toc_recursive_main.html entries=TOCFILE my_entry=MY_ENTRY path_to_root=PATH_TO_ROOT %}
+        {% include toc_recursive_main.html entries=TOCFILE my_entry=MY_ENTRY version_root=VERSION_ROOT %}
     </div>
 
     <!-- Page content -->
@@ -48,7 +47,7 @@ NOTE:
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            {% include toc_recursive_dropdown.html entries=TOCFILE my_entry=MY_ENTRY path_to_root=PATH_TO_ROOT %}
+                            {% include toc_recursive_dropdown.html entries=TOCFILE my_entry=MY_ENTRY version_root=VERSION_ROOT %}
                         </ul>
                     </div>
 
