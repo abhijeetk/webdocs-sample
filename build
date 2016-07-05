@@ -112,6 +112,7 @@ function main () {
       console.log ('   --prod  (production mode dest=%s)', config.DST_PROD);
       console.log ('   --serve (run localhost devel httpd)');
       console.log ('   --watch (watch for Markdown & Template update)');
+      console.log ('   --profile (stat analysis on build time)');
       console.log (' --site=xxx (force documents source default="%s")', config.DOCS_DIR);
       console.log (' --clean (clean all generated files)');
       console.log (' --fetch [--dumponly --force] (update references from git default=%s)', config.FETCH_CONFIG);

@@ -28,7 +28,7 @@ config = {
     SITE_DIR   : "site",
     DOCS_TOOLS : "../webdocs-tools",
     
-    PUSH_DEST  : "apache@www.ovh.iot:/srv/www/iotbzh/webdoc-sample/",
+    PUSH_DEST  : "apache@www.ovh.iot:/srv/www/iotbzh/webdocs-sample/",
     CRAWL_PROD : "http://docs.iot.bzh",
 
     LANGUAGES: ['en','fr'],

@@ -8,8 +8,7 @@
 title:          "WebDocs Sample"
 title_suffix:   "by IoT.bzh"
 url:            "http://docs.iot.bzh" # the base hostname & protocol
-description: >
-   IOT.BZH documentation testing website for AGL (Automotive Grade Linux)
+description:    IOT.BZH documentation testing website for AGL (Automotive Grade Linux)
 
 baseurl:        "" # the subpath of the site, e.g. /blog; NOTE: no trailing slash
 docsurl:        "/docs" # docsearch entry point 
@@ -70,32 +69,13 @@ lsi:  false # don't produce an index for related posts
 safe: false # disables plugins
 
 
-markdown: redcarpet
-
-redcarpet:
-    extensions:
-        # this enables code blocks denoted by backticks, like in GFM
-        # NOTE:
-        #      this is turned on by default by Jekyll, but is still
-        #      specified explicitly here in case the defaults change
-        - fenced_code_blocks
-
-        # this allows code blocks and HTML blocks to
-        # not have a leading or trailing newline
-        - lax_spacing
-
-        # allows tables
-        - tables
-
-        # surrounds highlighted text with <mark>s
-        - highlight
-
-highlighter: rouge
-
+# this is default github rendering engine
+markdown: kramdown
 kramdown:
     input: GFM
     hard_wrap: false
     syntax_highlighter: rouge
+    toc_levels: "2,3"
     
 graph: # ~~~ UML-style-class
     def_style: simple 
@@ -108,8 +88,8 @@ exclude:
     - static/css-src
     
 algolia: # https://community.algolia.com/docsearch/
-    index : "iotbzh"
-    apikey: "0a916ab198bd93d031aa70611271e42e"
+    index : "iot"
+    apikey: "40ffa808affb354450e0c0ddabe94aa9"
     
 disqus: # check https://disqus.com/admin
     name: "docsiotbzh"
